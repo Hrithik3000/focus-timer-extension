@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    body {
+      width: 320px;
+      min-height: 400px;
+      margin: 0;
+      padding: 20px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+    }
+    
+    .container {
+      text-align: center;
+    }
+    
+    h1 {
+      margin: 0 0 20px 0;
+      font-size: 24px;
+      font-weight: 300;
+    }
+    
+    .timer-display {
+      font-size: 48px;
+      font-weight: bold;
+      margin: 20px 0;
+      font-family: 'Courier New', monospace;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    }
+    
+    .controls {
+      margin: 20px 0;
+    }
+    
+    button {
+      background: rgba(255,255,255,0.2);
+      border: 2px solid rgba(255,255,255,0.3);
+      color: white;
+      padding: 12px 20px;
+      margin: 5px;
+      border-radius: 25px;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      backdrop-filter: blur(10px);
+    }
+    
+    button:hover {
+      background: rgba(255,255,255,0.3);
+      border-color: rgba(255,255,255,0.5);
+      transform: translateY(-2px);
+    }
+    
+    button:active {
+      transform: translateY(0);
+    }
+    
+    button.active {
+      background: rgba(255,255,255,0.4);
+      border-color: rgba(255,255,255,0.6);
+    }
+    
+    .preset-times {
+      margin: 15px 0;
+    }
+    
+    .preset-times button {
+      padding: 8px 15px;
+      font-size: 12px;
+      margin: 3px;
+    }
+    
+    .status {
+      margin: 15px 0;
+      font-size: 14px;
+      opacity: 0.9;
+    }
+    
+    .blocked-sites {
+      margin-top: 20px;
+      text-align: left;
+    }
+    
+    .blocked-sites h3 {
+      margin: 0 0 10px 0;
+      font-size: 16px;
+    }
+    
+    .site-input {
+      display: flex;
+      margin-bottom: 10px;
+      gap: 5px;
+    }
+    
+    input[type="text"] {
+      flex: 1;
+      padding: 8px;
+      border: none;
+      border-radius: 15px;
+      background: rgba(255,255,255,0.2);
+      color: white;
+      font-size: 12px;
+      backdrop-filter: blur(10px);
+    }
+    
+    input[type="text"]::placeholder {
+      color: rgba(255,255,255,0.7);
+    }
+    
+    .site-list {
+      max-height: 100px;
+      overflow-y: auto;
+      font-size: 12px;
+    }
+    
+    .site-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 5px 10px;
+      margin: 2px 0;
+      background: rgba(255,255,255,0.1);
+      border-radius: 10px;
+    }
+    
+    .remove-site {
+      background: rgba(255,255,255,0.2);
+      border: 1px solid rgba(255,255,255,0.3);
+      color: white;
+      padding: 2px 6px;
+      font-size: 10px;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🎯 Focus Timer</h1>
+    
+    <div class="timer-display" id="timerDisplay">25:00</div>
+    
+    <div class="controls">
+      <button id="startBtn">Start</button>
+      <button id="pauseBtn">Pause</button>
+      <button id="resetBtn">Reset</button>
+    </div>
+    
+    <div class="preset-times">
+      <button class="preset" data-minutes="25">25min</button>
+      <button class="preset" data-minutes="15">15min</button>
+      <button class="preset" data-minutes="45">45min</button>
+      <button class="preset" data-minutes="60">1hr</button>
+    </div>
+    
+    <div class="status" id="status">Ready to focus!</div>
+    
+    <div class="blocked-sites">
+      <h3>🚫 Block Sites</h3>
+      <div class="site-input">
+        <input type="text" id="siteInput" placeholder="Enter site (e.g., youtube.com)">
+        <button id="addSiteBtn">Add</button>
+      </div>
+      <div class="site-list" id="siteList"></div>
+    </div>
+  </div>
+  
+  <script src="popup.js"></script>
+</body>
+</html>
