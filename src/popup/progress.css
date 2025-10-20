@@ -1,0 +1,4 @@
+/* progress ring */
+.ring{position:relative; width:200px; height:200px; margin:8px auto}
+.ring svg{position:absolute; inset:0}
+.ring .value{position:absolute; inset:0; display:flex; align-items:center; justify-content:center; font-weight:800; font-size:44px}
