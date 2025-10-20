@@ -1,0 +1,10 @@
+{
+  "version": "2.1.0",
+  "date": "2025-10-20",
+  "notes": [
+    "Pro MV3 structure, warm UI, sounds, analytics groundwork",
+    "Settings/Stats foundations, CSV export wiring, shortcuts",
+    "Icons/sounds assets added",
+    "CI build and release workflows"
+  ]
+}
