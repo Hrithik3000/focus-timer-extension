@@ -1,0 +1,8 @@
+{
+  "name": "Keyboard Shortcuts",
+  "commands": {
+    "start": { "suggested_key": { "default": "Ctrl+Shift+S" }, "description": "Start timer" },
+    "pause": { "suggested_key": { "default": "Ctrl+Shift+P" }, "description": "Pause timer" },
+    "reset": { "suggested_key": { "default": "Ctrl+Shift+R" }, "description": "Reset timer" }
+  }
+}

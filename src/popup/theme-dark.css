@@ -1,0 +1,5 @@
+:root{ --bg1:#0f172a; --bg2:#1f2937; --card:#0b1220; --text:#e5e7eb; --muted:#94a3b8; --accent:#22c55e }
+body.theme-dark{ background:linear-gradient(135deg,var(--bg1),var(--bg2)); color:var(--text); }
+.card{ background:rgba(3,7,18,.72); border:1px solid rgba(148,163,184,.12) }
+.btn{ background:#16a34a }
+.btn.ghost{ background:#111827; color:#e5e7eb }
