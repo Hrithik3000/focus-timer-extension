@@ -1,0 +1,9 @@
+<!-- src/offscreen/audio.html -->
+<!doctype html>
+<html><body>
+<audio id="chime" src="../../assets/sounds/chime.mp3"></audio>
+<audio id="ding" src="../../assets/sounds/ding.mp3"></audio>
+<script>
+chrome.runtime.onMessage.addListener((m)=>{ if(m.type==='PLAY_SOUND'){ const id=m.payload?.name||'chime'; const el=document.getElementById(id); el&&el.play().catch(()=>{}); } });
+</script>
+</body></html>

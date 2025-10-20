@@ -1,0 +1,13 @@
+/* src/popup/styles.css */
+:root{ --bg1:#f6d365; --bg2:#fda085; --card:#ffffff; --text:#1f1f1f; --muted:#6b7280; --accent:#2563eb }
+body{ width:340px; min-height:480px; margin:0; font-family:Inter, system-ui, Segoe UI, Roboto, sans-serif; background:linear-gradient(135deg,var(--bg1),var(--bg2)); color:var(--text); }
+.app{ padding:18px; }
+.card{ background:var(--card); border-radius:16px; box-shadow:0 10px 30px rgba(0,0,0,.12); padding:16px; }
+.timer{ font-variant-numeric:tabular-nums; font-weight:800; font-size:56px; text-align:center; letter-spacing:1px; }
+.row{ display:flex; gap:8px; justify-content:center; margin:10px 0 }
+.btn{ border:none; background:#111827; color:#fff; padding:10px 14px; border-radius:12px; cursor:pointer; font-weight:600 }
+.btn.ghost{ background:#e5e7eb; color:#111827 }
+.kpi{ display:flex; gap:10px; justify-content:space-between; margin-top:10px }
+.kpi .box{ flex:1; text-align:center; background:#f3f4f6; padding:10px; border-radius:12px }
+.list{ max-height:120px; overflow:auto; }
+.badge{ font-size:11px; padding:2px 8px; border-radius:999px; background:#fee2e2; color:#991b1b }
